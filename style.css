@@ -1,0 +1,42 @@
+/* RESPONSIVE FOR ALL DEVICES */
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial, sans-serif}
+body{background:#000;color:#FFD700;min-height:100vh}
+
+.header{background:#111;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #FFD700;flex-wrap:wrap}
+.header h3{font-size:18px}
+
+.stat{display:grid;grid-template-columns:1fr 1fr;gap:15px;padding:15px}
+.card{background:#111;border:1px solid #FFD700;padding:20px;border-radius:12px;text-align:center}
+.card h2{font-size:32px;color:#FFD700}
+
+.top-btns{padding:15px;display:flex;gap:10px;flex-wrap:wrap}
+.btn{background:#FFD700;color:#000;padding:10px 16px;text-decoration:none;border-radius:6px;font-weight:bold;font-size:14px;display:inline-block}
+.btn-red{background:#ff2d2d;color:#fff}
+
+.table-wrap{padding:15px;overflow-x:auto}
+table{width:100%;border-collapse:collapse;background:#111;min-width:600px}
+th,td{border:1px solid #333;padding:10px;text-align:left;font-size:14px}
+th{background:#FFD700;color:#000}
+
+form{background:#111;border:2px solid #FFD700;padding:20px;border-radius:12px;max-width:500px;margin:20px auto}
+input,select,textarea{width:100%;padding:12px;margin:8px 0;background:#000;border:1px solid #FFD700;color:#FFD700;border-radius:6px;font-size:16px}
+button{width:100%;padding:14px;background:#FFD700;color:#000;font-weight:bold;border:none;border-radius:8px;font-size:16px;cursor:pointer}
+
+/* TABLET */
+@media (max-width: 768px){
+  .stat{grid-template-columns:1fr 1fr}
+  .header h3{font-size:16px}
+  table{min-width:500px}
+  th,td{font-size:13px;padding:8px}
+}
+
+/* PHONE */
+@media (max-width: 480px){
+  .stat{grid-template-columns:1fr}
+  .header{padding:12px}
+  .top-btns{flex-direction:column}
+  .btn{width:100%;text-align:center}
+  .box{width:95% !important;padding:20px !important}
+  form{margin:10px;padding:15px}
+  input,select,textarea{font-size:16px} /* stops zoom on iPhone */
+}

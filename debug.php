@@ -1,0 +1,1 @@
+<?php include 'db.php'; $r=mysqli_query($conn,"SELECT * FROM books LIMIT 1"); $row=mysqli_fetch_assoc($r); echo "<h1>Your columns are:</h1><pre>"; print_r(array_keys($row)); echo "</pre><h1>First book data:</h1><pre>"; print_r($row); ?>
